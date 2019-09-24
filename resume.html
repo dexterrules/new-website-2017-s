@@ -1,0 +1,584 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sanchit Soni</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 3em auto;
+		max-width: 700px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="261a7efd-3dae-4ea7-9411-4e3c3e5a1a53" class="page sans"><header><h1 class="page-title">Sanchit Soni</h1></header><div class="page-body"><p id="6dee9e2e-f711-4cd7-8f66-1d6787e7bf13" class=""><a href="mailto:sanchitsoni18@gmail.com">sanchitsoni18@gmail.com</a> | <a href="https://www.linkedin.com/in/sanchitsoni18/">Linkedin</a> | 812-327-5308</p><h1 id="69c9e111-3a72-4152-a4a0-f9c80bf6d28e" class="">Work Experience</h1><hr id="8fd9da83-444e-4643-a42c-3cd40884308a"/><p id="799abe02-c74b-43c8-8c78-3e8b91b3dd31" class="">
+</p><h3 id="e6f4f43c-f2ad-427d-92db-b5749c743c44" class=""><strong>UX Designer, 8x8 Inc.</strong>
+San Jose, CA
+<mark class="highlight-gray">July 2018-Present</mark></h3><hr id="585caa15-9ee9-497f-b8a9-4bdf1ed656e9"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ec326142-804b-47aa-959b-13877c3811d4"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Currently, I am working on Virtual Office Desktop (Calling UX) and Analytics only to realize that enterprise UX is a different beast altogether. Previously, I single-handedly designed 70% of team messaging (oh the irony!) features for Desktop, iOS, and Android across 10 release cycles which now has 154,000 enterprise users.</div></figure><p id="8feee353-8a51-4af4-ba18-8c4fe2ac6365" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="85792612-39e5-4125-bb15-b04795c367d9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">I also do stuff to make everyone&#x27;s life a little bit easier, boost efficiency and make UX/product assets more visible and actionable. Past projects include introducing Personas, instrumentation roadmap, user research plan template, UX research and team website and UX estimation toolkit. If I see broken plumbing, I will fix it myself or at least call a plumber.</div></figure><p id="1a2c6069-2eb3-401c-9878-590a8992f3cd" class="">
+</p><h3 id="bf1dd410-1f5e-49bb-b31a-e617cf0cca0f" class=""><strong>UX Designer, Intelligent systems Engineering, Indiana University</strong>
+Bloomington, IN
+<mark class="highlight-gray">Sept 2017- May 2018</mark></h3><hr id="96d36009-1b8d-4ef7-b2db-ccce99b87486"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="10dc1142-dc0c-4d9d-9cb4-a61063f2efb2"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">I basically helped a bunch of research scientists to improve their documentation IA and UX for an open-source project so that sane people could read it, understand it and apply it. Also, I made a lot of static websites for different conferences, talks, and workshops because of humbly bragging about my portfolio website that I had made from scratch.</div></figure><p id="3d874ef8-4aad-4e02-8bac-55d53842aa3c" class="">
+</p><h3 id="20cd38ce-c4f8-4a3b-8532-cba3d1fd585c" class=""><strong>Product Design Intern, StubHub</strong>
+San Francisco, CA
+<mark class="highlight-gray">May 2017- Aug 2017</mark></h3><hr id="9f77af92-24b4-46ad-874d-ffdd56406308"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="24f86694-1755-4703-8882-fc35ef903407"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">This summer internship was awesome, I got paid a lot for designing their community module which ended up maturing into StubHub&#x27;s own community platform: <a href="http://stubhub.community/">Stubhub.community</a></div></figure><p id="33466de9-e9c8-4288-b182-07773a843c27" class="">
+</p><h3 id="14968e00-b5d4-46bb-9a87-8557dbb4bf63" class=""><strong>Co-founder, Closelook</strong>
+Bengaluru, India
+<mark class="highlight-gray">Jan 2015- June 2016</mark></h3><hr id="649e8b58-f819-45cf-a2ea-2c5c8f4d6945"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9072e32e-9192-476e-9541-048541477425"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">A friend of mine called me up to do the design part for this app idea he had- called Closelook. I worked day and night to design every single page and UI component on the app, UX, marketing, branding and the logo. We launched and app did not get traction- 400 downloads over 1 year. We took lessons from our failures and launched a second app called Wiztrit (Android only)- which got 10,000 installs over the next six months with an average rating of 4.5
+Not an astronomical success or anything but this gig introduced me to the world of UX.</div></figure><p id="b62f4b1d-6eaa-44d1-94f9-492520b2e24f" class="">
+</p><hr id="80a0652c-e43c-4793-8019-2d8d1435827d"/><h1 id="aa7e3894-e394-4551-a660-2229c3455051" class="">Education</h1><hr id="e615b571-5862-4542-b3e5-c802127b51a6"/><h3 id="795cac71-e08d-46c4-bbff-1cd01c315e77" class=""><strong>Masters in Human-Computer Interaction Design, Indiana University Bloomington</strong>
+2016-2018
+<mark class="highlight-gray">Expensive but totally worth it. Career defining move.</mark></h3><hr id="f5515409-3604-4c00-8275-e8a467d623fc"/><h3 id="b2a12f31-458a-4255-b9db-4e4b0555777e" class=""><strong>Bachelors in Architecture, School of Planning and Architecture Bhopal, India</strong>
+2009-2014
+<mark class="highlight-gray">That&#x27;s where it all started.</mark></h3><hr id="245b61b1-09e0-4d9a-9e86-870035a66cc7"/><h1 id="d857262f-8fd1-4d0c-ba68-4a35dbf32b46" class="">Skills &amp; tools</h1><hr id="27f11c98-79ab-4013-9477-b7aa6f5fe553"/><p id="61bec35d-c2d9-4ee3-8713-bf4e4ffad44a" class=""><strong>Tools</strong> Figma/ Sketch/ Principle/ InVision</p><p id="b560b465-d904-4c8f-b8d5-18a817fc4c21" class=""><strong>Code</strong> <a href="https://github.com/dexterrules?tab=repositories">Github</a></p><p id="5fa04b8e-5693-4f15-96d8-498fa05ceb81" class=""><strong>Research Methods</strong> <a href="https://medium.com/design-garage">Medium</a></p></div></article></body></html>
